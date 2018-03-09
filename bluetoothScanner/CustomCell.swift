@@ -25,8 +25,14 @@ class CustomCell: UICollectionViewCell, CLLocationManagerDelegate {
     var beaconUuid: String!
     var beaconDetail: String!
 
+    required init(coder aDecoder: NSCoder){
+        super.init(coder: aDecoder)!
+    }
+    
     override init(frame: CGRect){
         super.init(frame: frame)
+        backgroundColor = .red
+        print("start custom cell")
         myLocationManager = CLLocationManager()
         myLocationManager.delegate = self
         myLocationManager.desiredAccuracy = kCLLocationAccuracyBest
@@ -37,9 +43,6 @@ class CustomCell: UICollectionViewCell, CLLocationManagerDelegate {
             myLocationManager.requestAlwaysAuthorization()
             //            myLocationManager.requestWhenInUseAuthorization()
         }
-    }
-    required init(coder aDecoder: NSCoder){
-        super.init(coder: aDecoder)!
     }
     
     private func startMyMonitoring() {

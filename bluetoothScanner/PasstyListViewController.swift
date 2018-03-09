@@ -1,9 +1,8 @@
 import UIKit
 import SlideMenuControllerSwift
 
-class PasstyListViewController: SlideMenuController {
+class PasstyListViewController: SlideMenuController, UICollectionViewDelegate, UICollectionViewDataSource {
 
-    @IBOutlet weak var label1: UILabel!
     let stock_info: [[String: String]] = UserDefaults.standard.object(forKey: "stock_info") as! [[String: String]]
     
     override func viewDidLoad() {
@@ -30,9 +29,8 @@ class PasstyListViewController: SlideMenuController {
     }
     
     // 表示するセルの数
-    func collectionView(collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-//        return stock_info.count
-        return stock_info.count != nil ? stock_info.count : 0
+    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+        return stock_info.count
     }
     
 }

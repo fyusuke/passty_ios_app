@@ -34,8 +34,8 @@ class MainViewController: UIViewController {
                 UnContractedPage.isHidden = true
             } else {
                 print("before start data")
-                PasttyListPage.isHidden = true
-                BeforeStartDatePage.isHidden = false
+                PasttyListPage.isHidden = false
+                BeforeStartDatePage.isHidden = true
                 UnContractedPage.isHidden = true
             }
         } else {
