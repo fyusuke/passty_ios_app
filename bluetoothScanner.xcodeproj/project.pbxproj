@@ -11,6 +11,7 @@
 		060E9543204439C300435018 /* UnContractedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 060E9542204439C300435018 /* UnContractedViewController.swift */; };
 		060E954B204460BE00435018 /* BeforeStartDateViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 060E954A204460BE00435018 /* BeforeStartDateViewController.swift */; };
 		061E3AA620517EBC001CE65B /* CustomCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 061E3AA520517EBC001CE65B /* CustomCell.swift */; };
+		061E3AA8205ACD25001CE65B /* BeaconObj.swift in Sources */ = {isa = PBXBuildFile; fileRef = 061E3AA7205ACD25001CE65B /* BeaconObj.swift */; };
 		067E8334203D72FE00FA9C35 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 067E8333203D72FE00FA9C35 /* AppDelegate.swift */; };
 		067E8336203D72FE00FA9C35 /* PasstyListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 067E8335203D72FE00FA9C35 /* PasstyListViewController.swift */; };
 		067E8339203D72FE00FA9C35 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 067E8337203D72FE00FA9C35 /* Main.storyboard */; };
@@ -52,6 +53,7 @@
 		060E9542204439C300435018 /* UnContractedViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UnContractedViewController.swift; sourceTree = "<group>"; };
 		060E954A204460BE00435018 /* BeforeStartDateViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BeforeStartDateViewController.swift; sourceTree = "<group>"; };
 		061E3AA520517EBC001CE65B /* CustomCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomCell.swift; sourceTree = "<group>"; };
+		061E3AA7205ACD25001CE65B /* BeaconObj.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BeaconObj.swift; sourceTree = "<group>"; };
 		067E8330203D72FE00FA9C35 /* bluetoothScanner.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = bluetoothScanner.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		067E8333203D72FE00FA9C35 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		067E8335203D72FE00FA9C35 /* PasstyListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PasstyListViewController.swift; sourceTree = "<group>"; };
@@ -166,6 +168,7 @@
 				0683DA522046ACA8009B8608 /* ContactUsFormViewController.swift */,
 				0683DA542046CAC5009B8608 /* OrderUpdateViewController.swift */,
 				0683DA562046F115009B8608 /* GrayOverlayViewController.swift */,
+				061E3AA7205ACD25001CE65B /* BeaconObj.swift */,
 			);
 			path = bluetoothScanner;
 			sourceTree = "<group>";
@@ -498,6 +501,7 @@
 				060E954B204460BE00435018 /* BeforeStartDateViewController.swift in Sources */,
 				0683DA552046CAC5009B8608 /* OrderUpdateViewController.swift in Sources */,
 				060E9543204439C300435018 /* UnContractedViewController.swift in Sources */,
+				061E3AA8205ACD25001CE65B /* BeaconObj.swift in Sources */,
 				0683DA51204557CA009B8608 /* MainViewController.swift in Sources */,
 				0683DA532046ACA8009B8608 /* ContactUsFormViewController.swift in Sources */,
 				067E839C2041A7E300FA9C35 /* LoginViewController.swift in Sources */,

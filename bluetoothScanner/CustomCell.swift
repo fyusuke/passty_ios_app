@@ -19,20 +19,15 @@ class CustomCell: UICollectionViewCell, CLLocationManagerDelegate {
     var myLocationManager:CLLocationManager!
     var myBeaconRegion:CLBeaconRegion!
     var UUID: String!
-    var major: String!
-    var minor: String!
+    var major: CLBeaconMajorValue!
+    var minor: CLBeaconMajorValue!
     var serial_num: String!
     var beaconUuid: String!
     var beaconDetail: String!
+    var num: Int!
 
     required init(coder aDecoder: NSCoder){
         super.init(coder: aDecoder)!
-    }
-    
-    override init(frame: CGRect){
-        super.init(frame: frame)
-        backgroundColor = .red
-        print("start custom cell")
         myLocationManager = CLLocationManager()
         myLocationManager.delegate = self
         myLocationManager.desiredAccuracy = kCLLocationAccuracyBest
@@ -45,14 +40,18 @@ class CustomCell: UICollectionViewCell, CLLocationManagerDelegate {
         }
     }
     
+    override init(frame: CGRect){
+        super.init(frame: frame)
+    }
+    
     private func startMyMonitoring() {
-        print("uuid:\(UUID)")
-        print("major:\(major)")
-        print("minor:\(minor)")
-        print("minor:\(serial_num)")
+        print("uuid:\(UUID!)")
+        print("major:\(major!)")
+        print("minor:\(minor!)")
+        print("serial_num:\(serial_num!)")
         let uuid: NSUUID! = NSUUID(uuidString: "\(UUID.lowercased())")
         let identifierStr: String = "iBeacon"
-        myBeaconRegion = CLBeaconRegion(proximityUUID: uuid as UUID, identifier: identifierStr)
+        myBeaconRegion = CLBeaconRegion(proximityUUID: uuid as UUID, major: major! , minor: minor!, identifier: identifierStr)
         myBeaconRegion.notifyEntryStateOnDisplay = false
         myBeaconRegion.notifyOnEntry = true
         myBeaconRegion.notifyOnExit = true
@@ -106,10 +105,14 @@ class CustomCell: UICollectionViewCell, CLLocationManagerDelegate {
         beaconUuid = String()
         beaconDetail = String()
         if(beacons.count > 0){
-            let beacon = beacons[0];
+            print("beacons: \(beacons)")
+            let beacon = beacons[num!];
+            print("beacon.proximityUUID: \(beacon.proximityUUID)")
+            print("beacon.major: \(beacon.major)")
+            print("beacon.minor: \(beacon.minor)")
             let beaconUUID = beacon.proximityUUID;
-            let minorID = beacon.minor;
             let majorID = beacon.major;
+            let minorID = beacon.minor;
             let rssi = beacon.rssi;
             var proximity = ""
             switch (beacon.proximity) {
@@ -136,6 +139,7 @@ class CustomCell: UICollectionViewCell, CLLocationManagerDelegate {
             myBeaconDetail += "Proximity:\(proximity) "
             myBeaconDetail += "RSSI:\(rssi)"
             //            print(myBeaconDetail)
+            print("UUID: \(UUID)");
             print(proximityArray)
             beaconDetail = myBeaconDetail
             
@@ -147,7 +151,7 @@ class CustomCell: UICollectionViewCell, CLLocationManagerDelegate {
                 }
             }
             
-            PasstyID.text = "ID: \(serial_num) "
+            PasstyID.text = "ID: \(serial_num!) "
             if ( proximityIsUnknown == true ) {
                 Result.text = proximityJPLabels["Unknown"];
             } else {

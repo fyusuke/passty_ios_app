@@ -15,11 +15,15 @@ class PasstyListViewController: SlideMenuController, UICollectionViewDelegate, U
     
     // セルが表示されるときに呼ばれる処理（1個のセルを描画する毎に呼び出されます
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell{
-        let cell:CustomCell = collectionView.dequeueReusableCell(withReuseIdentifier: "Cell", for: indexPath) as! CustomCell
-        cell.UUID = stock_info[indexPath.row]["uuid"]
-        cell.major = stock_info[indexPath.row]["major"]
-        cell.minor = stock_info[indexPath.row]["minor"]
+        let cell:CustomCell = collectionView.dequeueReusableCell(withReuseIdentifier: "CustomCell", for: indexPath) as! CustomCell
+        cell.UUID  = stock_info[indexPath.row]["uuid"]
+        cell.major = UInt16(stock_info[indexPath.row]["major"]!)!
+        cell.minor = UInt16(stock_info[indexPath.row]["minor"]!)!
+        print("cell.major: \(cell.major)")
+        print("cell.minor: \(cell.minor)")
         cell.serial_num = stock_info[indexPath.row]["serial_num"]
+        cell.num = indexPath.row
+        print("cell.num: \(cell.num)")
         return cell
     }
     
