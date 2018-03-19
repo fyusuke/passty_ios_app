@@ -9,10 +9,11 @@
 import UIKit
 import UserNotifications
 import NotificationCenter
+import AudioToolbox
+
 
 @UIApplicationMain
-class AppDelegate: UIResponder, UIApplicationDelegate {
-
+class AppDelegate: UIResponder, UIApplicationDelegate, UNUserNotificationCenterDelegate {
     var window: UIWindow?
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
@@ -39,14 +40,48 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     }
 
     func applicationWillTerminate(_ application: UIApplication) {
+
+        UNUserNotificationCenter.current().removeAllPendingNotificationRequests();
         let content = UNMutableNotificationContent()
-        content.title = "Passtyアプリがオフになりました"
-        content.body = "紛失アラート機能を利用する場合は、アプリを立ち上げたままにしてください"
-        let trigger = UNTimeIntervalNotificationTrigger(timeInterval: 3, repeats: false)
-        let request = UNNotificationRequest(identifier: "SimplifiedIOSNotification", content: content, trigger: trigger)
-        UNUserNotificationCenter.current().add(request, withCompletionHandler: nil)
+        content.title = "Passtyアプリがオフになりました";
+        content.subtitle = "iOS Development is fun"
+        content.body = "紛失アラート機能を利用する場合は、アプリを立ち上げたままにしてください";
+        content.sound = UNNotificationSound.default()
+        let trigger = UNTimeIntervalNotificationTrigger.init(timeInterval: 5.0, repeats: false)
+        let request = UNNotificationRequest.init(identifier: "CloseScreenAlertNotification", content: content, trigger: trigger)
+        let center = UNUserNotificationCenter.current()
+        center.add(request)
+        center.delegate = self
+
         print("terminated")
     }
+    
+    //上記のNotificatio後に受け取る関数
+    //ポップアップ表示のタイミングで呼ばれる関数
+    //（アプリがアクティブ、非アクテイブ、アプリ未起動,バックグラウンドでも呼ばれる）
+    func userNotificationCenter(_ center: UNUserNotificationCenter,
+                                willPresent notification: UNNotification,
+                                withCompletionHandler completionHandler: @escaping (UNNotificationPresentationOptions) -> Void) {
+        print("terminated2")
+        completionHandler([.alert,.sound])
+    }
+    
+//    //ポップアップ押した後に呼ばれる関数(↑の関数が呼ばれた後に呼ばれる)
+//    func userNotificationCenter(_ center: UNUserNotificationCenter,
+//                                didReceive response: UNNotificationResponse,
+//                                withCompletionHandler completionHandler: @escaping () -> Void) {
+//
+//        //Alertダイアログでテスト表示
+//        let contentBody = response.notification.request.content.body
+//        let alert:UIAlertController = UIAlertController(title: "受け取りました", message: contentBody, preferredStyle: UIAlertControllerStyle.alert)
+//        alert.addAction(UIAlertAction(title: "OK", style: UIAlertActionStyle.default, handler: {
+//            (action:UIAlertAction!) -> Void in
+//            print("Alert押されました")
+//        }))
+//        self.window?.rootViewController?.present(alert, animated: true, completion: nil)
+//
+//        completionHandler()
+//    }
 
 }
 

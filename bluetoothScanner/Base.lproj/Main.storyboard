@@ -750,7 +750,7 @@
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Passtyの位置" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="i1H-Vf-nTM">
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="近くに見つかりません" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="i1H-Vf-nTM">
                                                     <rect key="frame" x="8" y="226" width="293" height="25"/>
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="25" id="bny-Fj-hXM"/>
@@ -826,6 +826,6 @@
     </resources>
     <inferredMetricsTieBreakers>
         <segue reference="Efg-1o-HxZ"/>
-        <segue reference="agP-lW-t73"/>
+        <segue reference="Ocf-Dk-zRA"/>
     </inferredMetricsTieBreakers>
 </document>
