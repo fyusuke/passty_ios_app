@@ -26,6 +26,7 @@
 		0683DA532046ACA8009B8608 /* ContactUsFormViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0683DA522046ACA8009B8608 /* ContactUsFormViewController.swift */; };
 		0683DA552046CAC5009B8608 /* OrderUpdateViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0683DA542046CAC5009B8608 /* OrderUpdateViewController.swift */; };
 		0683DA572046F115009B8608 /* GrayOverlayViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0683DA562046F115009B8608 /* GrayOverlayViewController.swift */; };
+		06D04D1A20626C3700653C25 /* TermOfServiceViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06D04D1920626C3700653C25 /* TermOfServiceViewController.swift */; };
 		A274D8FF3F86BEF4C7BF06F7 /* Pods_bluetoothScannerUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5917B1EB5D19CAD2EF93B48F /* Pods_bluetoothScannerUITests.framework */; };
 		C0283309B3C29E549D554F50 /* Pods_bluetoothScanner.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D81DBA1B8FBFE5F493B4CC71 /* Pods_bluetoothScanner.framework */; };
 		C5DB107D2EB93808AAD5C24C /* Pods_bluetoothScannerTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 25DC7CCD70EBA7FE8EF9CC69 /* Pods_bluetoothScannerTests.framework */; };
@@ -54,7 +55,7 @@
 		060E954A204460BE00435018 /* BeforeStartDateViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BeforeStartDateViewController.swift; sourceTree = "<group>"; };
 		061E3AA520517EBC001CE65B /* CustomCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomCell.swift; sourceTree = "<group>"; };
 		061E3AA7205ACD25001CE65B /* BeaconObj.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BeaconObj.swift; sourceTree = "<group>"; };
-		067E8330203D72FE00FA9C35 /* bluetoothScanner.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = bluetoothScanner.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		067E8330203D72FE00FA9C35 /* Passty.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Passty.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		067E8333203D72FE00FA9C35 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		067E8335203D72FE00FA9C35 /* PasstyListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PasstyListViewController.swift; sourceTree = "<group>"; };
 		067E8338203D72FE00FA9C35 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -74,6 +75,7 @@
 		0683DA522046ACA8009B8608 /* ContactUsFormViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactUsFormViewController.swift; sourceTree = "<group>"; };
 		0683DA542046CAC5009B8608 /* OrderUpdateViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderUpdateViewController.swift; sourceTree = "<group>"; };
 		0683DA562046F115009B8608 /* GrayOverlayViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GrayOverlayViewController.swift; sourceTree = "<group>"; };
+		06D04D1920626C3700653C25 /* TermOfServiceViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TermOfServiceViewController.swift; sourceTree = "<group>"; };
 		098A7C0A56BA06586B0C2CAE /* Pods-bluetoothScanner.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-bluetoothScanner.debug.xcconfig"; path = "Pods/Target Support Files/Pods-bluetoothScanner/Pods-bluetoothScanner.debug.xcconfig"; sourceTree = "<group>"; };
 		25DC7CCD70EBA7FE8EF9CC69 /* Pods_bluetoothScannerTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_bluetoothScannerTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		5917B1EB5D19CAD2EF93B48F /* Pods_bluetoothScannerUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_bluetoothScannerUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -141,7 +143,7 @@
 		067E8331203D72FE00FA9C35 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				067E8330203D72FE00FA9C35 /* bluetoothScanner.app */,
+				067E8330203D72FE00FA9C35 /* Passty.app */,
 				067E8344203D72FE00FA9C35 /* bluetoothScannerTests.xctest */,
 				067E834F203D72FF00FA9C35 /* bluetoothScannerUITests.xctest */,
 			);
@@ -169,6 +171,7 @@
 				0683DA542046CAC5009B8608 /* OrderUpdateViewController.swift */,
 				0683DA562046F115009B8608 /* GrayOverlayViewController.swift */,
 				061E3AA7205ACD25001CE65B /* BeaconObj.swift */,
+				06D04D1920626C3700653C25 /* TermOfServiceViewController.swift */,
 			);
 			path = bluetoothScanner;
 			sourceTree = "<group>";
@@ -221,7 +224,7 @@
 			);
 			name = bluetoothScanner;
 			productName = bluetoothScanner;
-			productReference = 067E8330203D72FE00FA9C35 /* bluetoothScanner.app */;
+			productReference = 067E8330203D72FE00FA9C35 /* Passty.app */;
 			productType = "com.apple.product-type.application";
 		};
 		067E8343203D72FE00FA9C35 /* bluetoothScannerTests */ = {
@@ -508,6 +511,7 @@
 				0683DA4F2045537E009B8608 /* SideMenuViewController.swift in Sources */,
 				060E953F2044374700435018 /* TitleViewController.swift in Sources */,
 				0683DA4D20455172009B8608 /* MainContainerViewController.swift in Sources */,
+				06D04D1A20626C3700653C25 /* TermOfServiceViewController.swift in Sources */,
 				067E8336203D72FE00FA9C35 /* PasstyListViewController.swift in Sources */,
 				0683DA572046F115009B8608 /* GrayOverlayViewController.swift in Sources */,
 				061E3AA620517EBC001CE65B /* CustomCell.swift in Sources */,
@@ -683,7 +687,7 @@
 				INFOPLIST_FILE = bluetoothScanner/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.yusukefukuhara.bluetoothScanner;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = Passty;
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -699,7 +703,7 @@
 				INFOPLIST_FILE = bluetoothScanner/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.yusukefukuhara.bluetoothScanner;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = Passty;
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};

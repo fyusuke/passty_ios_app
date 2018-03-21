@@ -1,10 +1,11 @@
 import UIKit
+import AudioToolbox
 import SlideMenuControllerSwift
 import CoreLocation
 import UserNotifications
 import NotificationCenter
 
-class PasstyListViewController: SlideMenuController, UICollectionViewDelegate, UICollectionViewDataSource, CLLocationManagerDelegate {
+class PasstyListViewController: SlideMenuController, UICollectionViewDelegate, UICollectionViewDataSource, CLLocationManagerDelegate, UNUserNotificationCenterDelegate {
     
     var myBeaconRegion:CLBeaconRegion!
     var myLocationManager:CLLocationManager!
@@ -148,18 +149,30 @@ class PasstyListViewController: SlideMenuController, UICollectionViewDelegate, U
     
     func locationManager(_ manager: CLLocationManager, didExitRegion region: CLRegion) {
         print("didExitRegion: iBeacon lost");
+        AudioServicesPlayAlertSound(SystemSoundID(kSystemSoundID_Vibrate))
+        AudioServicesPlaySystemSound(kSystemSoundID_Vibrate);
         let beacon = region as! CLBeaconRegion
         if beacon.major != nil && beacon.minor != nil {
             if let customCell: CustomCell = self.view.viewWithTag(beacon.major!.intValue * 1000 + beacon.minor!.intValue) as? CustomCell{
                 customCell.resetProximity()
+                let title = "\(customCell.PasstyID.text!)は手元にありますか？"
+                let body =  "Passtyを見失いました"
                 customCell.Result.text = "近くに見つかりません"
-                
                 let content = UNMutableNotificationContent()
-                content.title = "ID：\(customCell.PasstyID.text as Optional)は手元にありますか？"
-                content.body = "Passtyを見失いました"
-                let trigger = UNTimeIntervalNotificationTrigger(timeInterval: 0, repeats: false)
+                content.title = title
+                content.body = body
+                content.sound = UNNotificationSound.default()
+                
+                let trigger = UNTimeIntervalNotificationTrigger(timeInterval: 1, repeats: false)
                 let request = UNNotificationRequest(identifier: "SimplifiedIOSNotification", content: content, trigger: trigger)
-                UNUserNotificationCenter.current().add(request, withCompletionHandler: nil)
+                let center = UNUserNotificationCenter.current()
+                center.add(request, withCompletionHandler: nil)
+                
+                if UIApplication.shared.applicationState == .active {
+                    let alert = UIAlertController(title: title, message: body, preferredStyle: .alert)
+                    alert.addAction(UIAlertAction(title: "閉じる", style: .default, handler: nil))
+                    self.present(alert, animated: true)
+                }
             }
         }
         manager.stopRangingBeacons(in: beacon)

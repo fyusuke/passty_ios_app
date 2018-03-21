@@ -13,7 +13,7 @@
         <!--Title View Controller-->
         <scene sceneID="8Fb-vc-aZ8">
             <objects>
-                <viewController id="gky-CT-jpK" customClass="TitleViewController" customModule="bluetoothScanner" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="gky-CT-jpK" customClass="TitleViewController" customModule="Passty" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="6RP-y8-VP7"/>
                         <viewControllerLayoutGuide type="bottom" id="zh7-1x-BMR"/>
@@ -47,7 +47,7 @@
         <!--Login View Controller-->
         <scene sceneID="qK5-lW-8yK">
             <objects>
-                <viewController id="9mr-NC-8i1" customClass="LoginViewController" customModule="bluetoothScanner" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="9mr-NC-8i1" customClass="LoginViewController" customModule="Passty" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="c1t-6J-SJ2"/>
                         <viewControllerLayoutGuide type="bottom" id="EO6-U5-gcc"/>
@@ -135,7 +135,7 @@
         <!--Main Container View Controller-->
         <scene sceneID="7Br-zg-Njy">
             <objects>
-                <viewController id="AZJ-BW-kPh" customClass="MainContainerViewController" customModule="bluetoothScanner" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="AZJ-BW-kPh" customClass="MainContainerViewController" customModule="Passty" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="ifh-Z2-8KW"/>
                         <viewControllerLayoutGuide type="bottom" id="Haa-we-lEe"/>
@@ -183,7 +183,7 @@
         <!--Side Menu View Controller-->
         <scene sceneID="DPZ-8M-DUI">
             <objects>
-                <tableViewController id="VsD-ce-9fI" customClass="SideMenuViewController" customModule="bluetoothScanner" customModuleProvider="target" sceneMemberID="viewController">
+                <tableViewController id="VsD-ce-9fI" customClass="SideMenuViewController" customModule="Passty" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="plain" separatorStyle="none" rowHeight="60" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="plI-r0-byF">
                         <rect key="frame" x="0.0" y="0.0" width="240" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -191,28 +191,8 @@
                         <sections>
                             <tableViewSection id="tav-Hg-L3D">
                                 <cells>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" rowHeight="60" id="w0Q-kK-Zf1">
-                                        <rect key="frame" x="0.0" y="0.0" width="240" height="60"/>
-                                        <autoresizingMask key="autoresizingMask"/>
-                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="w0Q-kK-Zf1" id="DTh-MM-YbQ">
-                                            <rect key="frame" x="0.0" y="0.0" width="240" height="60"/>
-                                            <autoresizingMask key="autoresizingMask"/>
-                                            <subviews>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="検知設定" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yk4-uA-jdx">
-                                                    <rect key="frame" x="71.5" y="15.5" width="97.5" height="29"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="24"/>
-                                                    <nil key="textColor"/>
-                                                    <nil key="highlightedColor"/>
-                                                </label>
-                                            </subviews>
-                                            <constraints>
-                                                <constraint firstItem="yk4-uA-jdx" firstAttribute="centerX" secondItem="DTh-MM-YbQ" secondAttribute="centerX" id="OP1-fB-JsK"/>
-                                                <constraint firstItem="yk4-uA-jdx" firstAttribute="centerY" secondItem="DTh-MM-YbQ" secondAttribute="centerY" id="zcB-kA-mCT"/>
-                                            </constraints>
-                                        </tableViewCellContentView>
-                                    </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="R8a-3c-n9l">
-                                        <rect key="frame" x="0.0" y="60" width="240" height="60"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="240" height="60"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="R8a-3c-n9l" id="3Hq-az-gsI">
                                             <rect key="frame" x="0.0" y="0.0" width="240" height="60"/>
@@ -232,7 +212,7 @@
                                         </tableViewCellContentView>
                                     </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="wT8-ad-V43">
-                                        <rect key="frame" x="0.0" y="120" width="240" height="60"/>
+                                        <rect key="frame" x="0.0" y="60" width="240" height="60"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="wT8-ad-V43" id="zFI-GA-3Lw">
                                             <rect key="frame" x="0.0" y="0.0" width="240" height="60"/>
@@ -252,7 +232,7 @@
                                         </tableViewCellContentView>
                                     </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="Yz9-fF-LnV">
-                                        <rect key="frame" x="0.0" y="180" width="240" height="60"/>
+                                        <rect key="frame" x="0.0" y="120" width="240" height="60"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Yz9-fF-LnV" id="HHd-93-Ev1">
                                             <rect key="frame" x="0.0" y="0.0" width="240" height="60"/>
@@ -272,7 +252,7 @@
                                         </tableViewCellContentView>
                                     </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="rYo-Ue-Xio">
-                                        <rect key="frame" x="0.0" y="240" width="240" height="60"/>
+                                        <rect key="frame" x="0.0" y="180" width="240" height="60"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="rYo-Ue-Xio" id="kxE-13-yiM">
                                             <rect key="frame" x="0.0" y="0.0" width="240" height="60"/>
@@ -307,7 +287,7 @@
         <!--Main View Controller-->
         <scene sceneID="gCz-ae-PXY">
             <objects>
-                <viewController id="QQE-zT-VPg" customClass="MainViewController" customModule="bluetoothScanner" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="QQE-zT-VPg" customClass="MainViewController" customModule="Passty" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="PQ9-DQ-BFd"/>
                         <viewControllerLayoutGuide type="bottom" id="d9b-6B-k7r"/>
@@ -425,7 +405,7 @@
         <!--Order Update View Controller-->
         <scene sceneID="6cS-Rs-cld">
             <objects>
-                <viewController id="H6r-HM-mHc" customClass="OrderUpdateViewController" customModule="bluetoothScanner" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="H6r-HM-mHc" customClass="OrderUpdateViewController" customModule="Passty" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="aqC-ci-gzs"/>
                         <viewControllerLayoutGuide type="bottom" id="tJZ-3K-Ehq"/>
@@ -435,7 +415,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6x7-Vd-InQ">
-                                <rect key="frame" x="37" y="169" width="300" height="20"/>
+                                <rect key="frame" x="37" y="189" width="300" height="20"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="300" id="ebn-lG-TWX"/>
                                     <constraint firstAttribute="height" constant="20" id="y9T-j7-ZOF"/>
@@ -445,7 +425,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="契約の更新" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0l9-Qf-JXD">
-                                <rect key="frame" x="117" y="104" width="140" height="25"/>
+                                <rect key="frame" x="117" y="124" width="140" height="25"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="25" id="N9k-yx-wJo"/>
                                     <constraint firstAttribute="width" constant="140" id="dJZ-k9-rC6"/>
@@ -455,10 +435,12 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6FQ-qn-EN3">
-                                <rect key="frame" x="87" y="229" width="200" height="208"/>
-                                <color key="backgroundColor" red="0.0" green="0.98106676339999999" blue="0.57369142770000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <rect key="frame" x="87" y="249" width="200" height="200"/>
+                                <color key="backgroundColor" red="0.2131596124489461" green="0.50779125810574444" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="100" id="F9N-iF-wYz"/>
+                                    <constraint firstAttribute="height" constant="200" id="I6V-KB-zS4"/>
+                                    <constraint firstAttribute="width" relation="lessThanOrEqual" constant="200" id="M9p-rT-DC3"/>
                                     <constraint firstAttribute="width" constant="200" id="VFN-TK-skG"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="24"/>
@@ -480,10 +462,9 @@
                             <constraint firstItem="F0g-YQ-aCg" firstAttribute="centerY" secondItem="DCj-xM-Y3h" secondAttribute="centerY" id="LiG-xn-pTk"/>
                             <constraint firstItem="6FQ-qn-EN3" firstAttribute="centerX" secondItem="DCj-xM-Y3h" secondAttribute="centerX" id="Nsn-BZ-Mrk"/>
                             <constraint firstItem="0l9-Qf-JXD" firstAttribute="centerX" secondItem="DCj-xM-Y3h" secondAttribute="centerX" id="Se0-ng-bSQ"/>
-                            <constraint firstItem="6FQ-qn-EN3" firstAttribute="centerY" secondItem="DCj-xM-Y3h" secondAttribute="centerY" id="Utj-rO-izk"/>
                             <constraint firstItem="6FQ-qn-EN3" firstAttribute="top" secondItem="6x7-Vd-InQ" secondAttribute="bottom" constant="40" id="fsX-Y4-aRW"/>
+                            <constraint firstItem="0l9-Qf-JXD" firstAttribute="top" secondItem="aqC-ci-gzs" secondAttribute="bottom" constant="60" id="kFw-KM-nX0"/>
                             <constraint firstItem="6x7-Vd-InQ" firstAttribute="top" secondItem="0l9-Qf-JXD" secondAttribute="bottom" constant="40" id="nCD-dR-7B7"/>
-                            <constraint firstItem="0l9-Qf-JXD" firstAttribute="top" secondItem="aqC-ci-gzs" secondAttribute="bottom" constant="40" id="qpr-ev-JuP"/>
                         </constraints>
                     </view>
                     <connections>
@@ -499,7 +480,7 @@
         <!--Contact Us Form View Controller-->
         <scene sceneID="U7c-v5-BvG">
             <objects>
-                <viewController id="hhH-11-Dix" customClass="ContactUsFormViewController" customModule="bluetoothScanner" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="hhH-11-Dix" customClass="ContactUsFormViewController" customModule="Passty" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="xP3-8v-fWi"/>
                         <viewControllerLayoutGuide type="bottom" id="NJ6-uH-DPf"/>
@@ -509,17 +490,17 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="お問い合わせ" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vaw-mc-CDW">
-                                <rect key="frame" x="132.5" y="104" width="110" height="20.5"/>
+                                <rect key="frame" x="112.5" y="124" width="150" height="20.5"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="110" id="AMA-Gy-afy"/>
+                                    <constraint firstAttribute="width" constant="150" id="7pE-A9-bL5"/>
                                     <constraint firstAttribute="height" constant="20" id="cBr-XS-nxq"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="24"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="6nX-Gh-QOw">
-                                <rect key="frame" x="26" y="184.5" width="323" height="200"/>
+                                <rect key="frame" x="26" y="204.5" width="323" height="200"/>
                                 <color key="backgroundColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="200" id="TdD-U9-cSk"/>
@@ -528,7 +509,7 @@
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Qty-o7-bce">
-                                <rect key="frame" x="125" y="414.5" width="125" height="30"/>
+                                <rect key="frame" x="125" y="434.5" width="125" height="30"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="125" id="IRd-XM-dAx"/>
                                     <constraint firstAttribute="height" constant="30" id="hH6-ZU-dO1"/>
@@ -539,7 +520,7 @@
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yrD-dy-G9k">
-                                <rect key="frame" x="10" y="144.5" width="355" height="20"/>
+                                <rect key="frame" x="10" y="164.5" width="355" height="20"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="20" id="ERV-qf-Xb2"/>
                                 </constraints>
@@ -554,9 +535,9 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstAttribute="trailingMargin" secondItem="6nX-Gh-QOw" secondAttribute="trailing" constant="10" id="29W-tm-ilT"/>
+                            <constraint firstItem="vaw-mc-CDW" firstAttribute="top" secondItem="xP3-8v-fWi" secondAttribute="bottom" constant="60" id="2OY-B2-TT8"/>
                             <constraint firstItem="6nX-Gh-QOw" firstAttribute="leading" secondItem="bau-kG-RGv" secondAttribute="leadingMargin" constant="10" id="3lz-oE-uXJ"/>
                             <constraint firstItem="yrD-dy-G9k" firstAttribute="leading" secondItem="bau-kG-RGv" secondAttribute="leading" constant="10" id="E3J-hh-jcY"/>
-                            <constraint firstItem="vaw-mc-CDW" firstAttribute="top" secondItem="xP3-8v-fWi" secondAttribute="bottom" constant="40" id="KW5-8u-u5x"/>
                             <constraint firstItem="6nX-Gh-QOw" firstAttribute="top" secondItem="yrD-dy-G9k" secondAttribute="bottom" constant="20" id="Rcl-jv-b0n"/>
                             <constraint firstAttribute="trailing" secondItem="yrD-dy-G9k" secondAttribute="trailing" constant="10" id="Vm4-jS-Uke"/>
                             <constraint firstItem="kba-eb-Kx5" firstAttribute="centerY" secondItem="bau-kG-RGv" secondAttribute="centerY" id="aK5-VX-5af"/>
@@ -580,10 +561,11 @@
             </objects>
             <point key="canvasLocation" x="3460" y="3664.3178410794608"/>
         </scene>
-        <!--View Controller-->
+        <!--Term Of Service View Controller-->
         <scene sceneID="c9m-Gf-hDq">
             <objects>
-                <viewController id="iV7-J2-eRc" sceneMemberID="viewController">
+                <placeholder placeholderIdentifier="IBFirstResponder" id="de7-uv-hf5" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <viewController id="iV7-J2-eRc" customClass="TermOfServiceViewController" customModule="Passty" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="6nm-hz-3Zy"/>
                         <viewControllerLayoutGuide type="bottom" id="wr4-dI-sLN"/>
@@ -592,20 +574,29 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="利用規約" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pp0-rT-Oqo">
-                                <rect key="frame" x="135" y="90" width="104" height="53"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
+                            <wkWebView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="uXB-g9-XUg">
+                                <rect key="frame" x="0.0" y="64" width="375" height="603"/>
+                                <color key="backgroundColor" red="0.36078431370000003" green="0.38823529410000002" blue="0.4039215686" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <wkWebViewConfiguration key="configuration">
+                                    <audiovisualMediaTypes key="mediaTypesRequiringUserActionForPlayback" none="YES"/>
+                                    <wkPreferences key="preferences"/>
+                                </wkWebViewConfiguration>
+                            </wkWebView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="uXB-g9-XUg" firstAttribute="leading" secondItem="1JQ-3I-3ME" secondAttribute="leading" id="8FU-St-WY3"/>
+                            <constraint firstItem="uXB-g9-XUg" firstAttribute="top" secondItem="6nm-hz-3Zy" secondAttribute="bottom" id="UVZ-EJ-lmv"/>
+                            <constraint firstItem="wr4-dI-sLN" firstAttribute="top" secondItem="uXB-g9-XUg" secondAttribute="bottom" id="dlG-Hd-yJL"/>
+                            <constraint firstAttribute="trailing" secondItem="uXB-g9-XUg" secondAttribute="trailing" id="lYX-v2-b3d"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="webView" destination="uXB-g9-XUg" id="JiS-Al-KVU"/>
+                    </connections>
                 </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="de7-uv-hf5" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="4165.6000000000004" y="3656.2218890554727"/>
+            <point key="canvasLocation" x="4175.1999999999998" y="3664.3178410794608"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="zGq-s0-UYx">
@@ -628,7 +619,7 @@
         <!--Before Start Date View Controller-->
         <scene sceneID="Flh-Ne-IkL">
             <objects>
-                <viewController id="3Kt-YU-Ieq" customClass="BeforeStartDateViewController" customModule="bluetoothScanner" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="3Kt-YU-Ieq" customClass="BeforeStartDateViewController" customModule="Passty" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y2q-uG-rjV"/>
                         <viewControllerLayoutGuide type="bottom" id="n84-lo-GmG"/>
@@ -681,7 +672,7 @@
         <!--Un Contracted View Controller-->
         <scene sceneID="PKk-I6-DcY">
             <objects>
-                <viewController id="AAC-Y1-ELL" customClass="UnContractedViewController" customModule="bluetoothScanner" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="AAC-Y1-ELL" customClass="UnContractedViewController" customModule="Passty" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="CMZ-UE-G2v"/>
                         <viewControllerLayoutGuide type="bottom" id="XMc-St-0f4"/>
@@ -711,7 +702,7 @@
         <!--Passty List View Controller-->
         <scene sceneID="1X3-yB-uGJ">
             <objects>
-                <viewController id="4YL-7t-gyl" customClass="PasstyListViewController" customModule="bluetoothScanner" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="4YL-7t-gyl" customClass="PasstyListViewController" customModule="Passty" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="OKg-gk-vHW"/>
                         <viewControllerLayoutGuide type="bottom" id="VK7-zW-8bz"/>
@@ -730,7 +721,7 @@
                                     <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                                 </collectionViewFlowLayout>
                                 <cells>
-                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="CustomCell" id="Y7b-yf-z2Q" customClass="CustomCell" customModule="bluetoothScanner" customModuleProvider="target">
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="CustomCell" id="Y7b-yf-z2Q" customClass="CustomCell" customModule="Passty" customModuleProvider="target">
                                         <rect key="frame" x="17" y="0.0" width="309" height="290"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO">
@@ -801,7 +792,7 @@
         <!--Gray Overlay View Controller-->
         <scene sceneID="TUG-d5-cqD">
             <objects>
-                <viewController id="l9p-ux-QcD" customClass="GrayOverlayViewController" customModule="bluetoothScanner" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="l9p-ux-QcD" customClass="GrayOverlayViewController" customModule="Passty" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="JZQ-RZ-p3M"/>
                         <viewControllerLayoutGuide type="bottom" id="sfC-Lf-dva"/>
